@@ -1,0 +1,38 @@
+{
+  "netflix": {
+    "profiles": 150,
+    "profiles_with_majority_cycle": 0,
+    "fraction": 0.0
+  },
+  "sushi_a_majority": {
+    "users": 5000,
+    "cyclic_triples": 0,
+    "decisive_triples": 120,
+    "fraction": 0.0
+  },
+  "sushi_b_majority": {
+    "users": 5000,
+    "min_voters_per_pair": 20,
+    "pairs_compared": 2373,
+    "cyclic_triples": 391,
+    "decisive_triples": 36241,
+    "fraction": 0.010788885516404072
+  },
+  "sushi_attribute_majority": {
+    "items": 100,
+    "cyclic_triples": 76,
+    "decisive_triples": 81194,
+    "fraction": 0.0009360297558932926
+  },
+  "pokemon": {
+    "type_chart": {
+      "cyclic": 42,
+      "decisive": 128,
+      "fraction": 0.328125
+    },
+    "pokemon_pairs": {
+      "fraction": 0.2149439601494396,
+      "decisive_sampled": 4015
+    }
+  }
+}

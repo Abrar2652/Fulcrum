@@ -1,0 +1,58 @@
+{
+  "construction": {
+    "n=3 exhaustive": {
+      "tournaments": 8,
+      "realised": 8
+    },
+    "n=4 exhaustive": {
+      "tournaments": 64,
+      "realised": 64
+    },
+    "n=5 exhaustive": {
+      "tournaments": 1024,
+      "realised": 1024
+    },
+    "n=6 random": {
+      "trials": 300,
+      "realised": 300
+    },
+    "n=8 random": {
+      "trials": 300,
+      "realised": 300
+    },
+    "n=10 random": {
+      "trials": 300,
+      "realised": 300
+    },
+    "n=12 random": {
+      "trials": 300,
+      "realised": 300
+    }
+  },
+  "realizable_counts_grid": {
+    "3": {
+      "n": 3,
+      "all_tournaments": 8,
+      "linear_orders(m=1)": 6,
+      "m=1": 6,
+      "m=2": 6,
+      "m=3": 8
+    },
+    "4": {
+      "n": 4,
+      "all_tournaments": 64,
+      "linear_orders(m=1)": 24,
+      "m=1": 24,
+      "m=2": 24,
+      "m=3": "skipped (grid too large)"
+    },
+    "5": {
+      "n": 5,
+      "all_tournaments": 1024,
+      "linear_orders(m=1)": 120,
+      "m=1": 120,
+      "m=2": "skipped (grid too large)",
+      "m=3": "skipped (grid too large)"
+    }
+  }
+}

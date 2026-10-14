@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fulcrum"
+version = "0.1.0"
+description = "Fulcrum: a prioritized, multi-tier, context-dependent, strength-typed preference calculus for conflict resolution in formal argumentation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "The Fulcrum Authors" }]
+dependencies = [
+    "networkx>=3.0",   # graph substrate for Dung AFs
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "hypothesis>=6.90",   # property-based tests (required by the project design notes Phase 4)
+    "mypy>=1.8",
+    "ruff>=0.3",
+]
+solver = [
+    "clingo>=5.6",        # optional: machine-check separation on finite cases (Phase 2)
+]
+
+[tool.setuptools.packages.find]
+include = ["fulcrum*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "gate: Phase-2 GATE tests. These encode the separation conjecture. Expected to FAIL or be SKIPPED until the formal result is established. DO NOT delete to make them pass.",
+    "slow: long-running tests.",
+]
+filterwarnings = ["error"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_ignores = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# Relaxed style rules (research code): line length, one-line compound statements,
+# lambda bindings (handy in tests), and explicit zip strictness.
+ignore = ["E501", "E701", "E702", "E731", "B905"]
+
+[tool.ruff.lint.per-file-ignores]
+"experiments/*.py" = ["E402"]   # imports after offline env setup
+"differentiable/*.py" = ["E402"]

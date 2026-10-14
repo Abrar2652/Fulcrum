@@ -1,0 +1,51 @@
+{
+ "extra": {
+  "0": {
+   "test_graph_ceilings": {
+    "lower": 0.6734222222222221,
+    "upper": 0.6734222222222221,
+    "pair_ceiling": 0.6931111111111111,
+    "lp_fas": 880.7258064516128,
+    "achieved_fas": 913.0,
+    "N": 45000.0,
+    "n_cycle_constraints": 19156,
+    "seconds_lp": 32.01253056526184,
+    "exact": 0.6734222222222221,
+    "exact_fas": 886.0,
+    "seconds_ilp": 227.1334822177887,
+    "seconds": 259.1780412197113
+   }
+  },
+  "1": {
+   "test_graph_ceilings": {
+    "lower": 0.6733777777777779,
+    "upper": 0.6740969344705401,
+    "pair_ceiling": 0.6930222222222222,
+    "lp_fas": 851.6379488256963,
+    "achieved_fas": 884.0,
+    "N": 45000.0,
+    "n_cycle_constraints": 18584,
+    "seconds_lp": 25.367425203323364,
+    "exact": null,
+    "seconds_ilp": 600.4378969669342,
+    "seconds": 625.8319578170776
+   }
+  },
+  "2": {
+   "test_graph_ceilings": {
+    "lower": 0.6677555555555555,
+    "upper": 0.6677555555555555,
+    "pair_ceiling": 0.6867555555555556,
+    "lp_fas": 854.0,
+    "achieved_fas": 867.0,
+    "N": 45000.0,
+    "n_cycle_constraints": 20337,
+    "seconds_lp": 12.025526762008667,
+    "exact": 0.6677555555555555,
+    "exact_fas": 855.0,
+    "seconds_ilp": 105.32361459732056,
+    "seconds": 117.37360906600952
+   }
+  }
+ }
+}
